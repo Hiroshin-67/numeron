@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.numeron{
+  text-align: center;
+}
+
+.result{
+  text-align: center;
+  margin: auto;
+}
+
+#table{
+  margin: auto;
+}

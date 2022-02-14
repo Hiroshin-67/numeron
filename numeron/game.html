@@ -2,25 +2,30 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Nume0n作ってみました</title>
     <script type="text/javascript" src="js/game.js"></script>
   </head>
   <body>
-    <form name="response" action="#">
-      <input type="text" id="res">
-      <input type="button" value="送信！" onclick="numeron();">
-    </form>
-  <table id="table">
-    <tbody>
-      <tr>
-        <th>回数</th><th>入力</th><th>結果</th>
-      </tr>
-      <tr>
-        <td><div class="try_num"></div></td>
-        <td><div class="input"></div></td>
-        <td><div class="result"></div></td>
-      </tr>
-    </tbody>
-
+    <div class="numeron">
+      <form name="response" action="#">
+        <input type="text" id="res">
+        <input type="button" value="送信！" onclick="numeron();">
+      </form>
+    </div>
+    <div class="result">
+      <table id="table">
+        <tbody>
+          <tr>
+            <th>回数</th><th>入力</th><th>結果</th>
+          </tr>
+          <tr>
+            <td><div class="try_num"></div></td>
+            <td><div class="input"></div></td>
+            <td><div class="result"></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </body>
 </html>
