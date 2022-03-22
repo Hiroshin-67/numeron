@@ -12,3 +12,8 @@
 #table{
   margin: auto;
 }
+
+th, td {
+  padding-left: 30px;
+  padding-right: 30px;
+}

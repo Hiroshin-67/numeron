@@ -43,19 +43,16 @@ function check_num(ans_array, res_array){
   }
 }
 
-// 入力データを配列化する
+// 入力データを配列化する（数値以外が入力されると0を返す）
 function get_res_array(){
   var res = document.getElementById('res').value;
+  if(isNaN(res)){
+    return 0;
+  }
   let res_array = [];
-
   for (let i=0;i<res.length;i++){
     res_array[i] = res[i];
   }
-  /*
-  for (let i=0; i<res_array.length; i++){
-    document.write("<p>" + res_array[i] + "</p>");
-  }
-  */
   return res_array;
 }
 
@@ -104,15 +101,25 @@ function table_write(){
 
 // ジャッジシステム
 function numeron(){
-  count++;
-  if (count == 1){
-    make_random_array(4);
-  }
   eat = 0;
   bite = 0;
-  check_num(ans_array, get_res_array());
+  res_array = get_res_array();
+
+  if(res_array == 0){
+    // 数値以外が入力されている
+    return alert("数値を入力してください");
+  } else if(res_array.length > 4 || res_array.length <= 3 ){
+    // 入力値が４桁ではない
+    return alert("４桁の数字を入力してください");
+  }
+  count++;
+  if (count == 1){
+    // 正解値を作成
+    make_random_array(4);
+  }
+  check_num(ans_array, res_array);
   table_write();
-  //document.write("<p>" + eat + bite + "</p>");
-  //for (let i=0;i<ans_array.length;i++){
-    //document.write("<p>" + ans_array[i] + "</p>");
+  if(eat == 4){
+    alert("Congratulations!!");
+  }
 }

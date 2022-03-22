@@ -8,10 +8,16 @@
   </head>
   <body>
     <div class="numeron">
+      <h1>数字あてゲーム　4EAT/0BITEを目指そう</h1>
+      <p>EAT : 数字と位置が同じ / BITE : 数字だけ同じ</p>
+      <p>（例）正解=1234 / 入力=1256 の時 2EAT/0BITE</p>
+      <p>（例）正解=1234 / 入力=4321 の時 0EAT/4BITE</p>
+      <p>４桁の数字を入力してください</p>
       <form name="response" action="#">
         <input type="text" id="res">
         <input type="button" value="送信！" onclick="numeron();">
       </form>
+      <p id="error"></p>
     </div>
     <div class="result">
       <table id="table">
@@ -19,7 +25,7 @@
           <tr>
             <th>回数</th><th>入力</th><th>結果</th>
           </tr>
-          <tr>
+          <tr></tr>
             <td><div class="try_num"></div></td>
             <td><div class="input"></div></td>
             <td><div class="result"></div></td>
