@@ -3,12 +3,25 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
-    <title>Nume0n作ってみました</title>
-    <script type="text/javascript" src="js/game.js"></script>
+    <title>数あてゲーム</title>
+    <script type="text/javascript" src="js/game2.js"></script>
   </head>
   <body>
+    <!-- HEADER -->
+    <header class="page-header wrapper">
+      <h1><a href="index.html"><img class="logo" src="img/logo_transparent.png" alt="Hirooka's Web Page"></a></h1>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#production">production</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 数あてゲーム -->
     <div class="numeron">
-      <h1>数字あてゲーム　4EAT/0BITEを目指そう</h1>
+      <h1>数あてゲーム　4EAT/0BITEを目指そう</h1>
       <p>EAT : 数字と位置が同じ / BITE : 数字だけ同じ</p>
       <p>（例）正解=1234 / 入力=1256 の時 2EAT/0BITE</p>
       <p>（例）正解=1234 / 入力=4321 の時 0EAT/4BITE</p>
@@ -17,7 +30,6 @@
         <input type="text" id="res">
         <input type="button" value="送信！" onclick="numeron();">
       </form>
-      <p id="error"></p>
     </div>
     <div class="result">
       <table id="table">
@@ -32,6 +44,17 @@
           </tr>
         </tbody>
       </table>
+      <button type="submit" name="button" form="reset">リセット</button>
+      <button type="submit" name="button" form="go_home">ホームに戻る</button>
+      <form id="reset" action="" method="post"></form>
+      <form id="go_home" action="index.html" method="post"></form>
     </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="wrapper">
+        <p><small>&copy; 2022 Shinnosuke Hirooka </small></p>
+      </div>
+    </footer>
   </body>
 </html>
