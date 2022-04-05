@@ -91,6 +91,7 @@ function numeron(){
   gameState.count++;
   if (gameState.count === 1){
     // 正解値を作成
+    console.log("answer");
     arrays.ansArray = generateRandomArray(1,9,4);
   }
   arrays.getResArray();
@@ -100,3 +101,7 @@ function numeron(){
     alert("Congratulations!!");
   }
 }
+
+//イベント
+const button = document.getElementById("send");
+button.addEventListener("click", numeron);
